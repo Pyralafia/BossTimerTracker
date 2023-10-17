@@ -5,21 +5,37 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BossTimer"
         mc:Ignorable="d"
-        Title="Boss try Timer Tracker" Height="450" Width="600
+        Title="Boss try Timer Tracker" Height="500" Width="600
         ">
     <Grid HorizontalAlignment="Center" Width="600">
         <ListBox x:Name="timeListbx" d:ItemsSource="{Binding timeList}" Margin="10,10,300,10"/>
-        <Label Content="Nb morts" HorizontalAlignment="Left" Margin="353,248,0,0" VerticalAlignment="Top" Width="97"/>
-        <Label Content="Temps total" HorizontalAlignment="Left" Margin="353,279,0,0" VerticalAlignment="Top" Width="97"/>
-        <Button x:Name="BossBtn" Content="Fin run" HorizontalAlignment="Left" Margin="405,193,0,0" VerticalAlignment="Top" Height="27" Width="112" Click="BossBtn_Click"/>
-        <TextBlock x:Name="TryTxtBl" HorizontalAlignment="Left" Margin="460,253,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="21" Width="113"/>
-        <TextBlock x:Name="TimeTxtBl" HorizontalAlignment="Left" Margin="460,281,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="21" Width="113"/>
-        <Slider x:Name="speedSlider" HorizontalAlignment="Left" Margin="375,108,0,0" VerticalAlignment="Top" Width="150" Minimum="1" Maximum="4" TickPlacement="BottomRight" TickFrequency="1" IsSnapToTickEnabled="True"/>
-        <Label Content="4" HorizontalAlignment="Left" Margin="512,126,0,0" VerticalAlignment="Top" Width="16" FontSize="10"/>
-        <Label Content="2" HorizontalAlignment="Left" Margin="419,126,0,0" VerticalAlignment="Top" Width="20" FontSize="10"/>
-        <Label Content="3" HorizontalAlignment="Left" Margin="465,126,0,0" VerticalAlignment="Top" Width="19" FontSize="10"/>
-        <Label Content="1" HorizontalAlignment="Left" Margin="373,126,0,0" VerticalAlignment="Top" Width="20" FontSize="10"/>
-        <Label Content="Video speed :" HorizontalAlignment="Left" Margin="373,77,0,0" VerticalAlignment="Top" Width="88"/>
+        <Label Content="Temps total" HorizontalAlignment="Left" Margin="354,241,0,0" VerticalAlignment="Top" Width="97"/>
+        <Button x:Name="BossBtn" Content="Fin boss" HorizontalAlignment="Left" Margin="405,193,0,0" VerticalAlignment="Top" Height="27" Width="112" Click="BossBtn_Click"/>
+        <TextBlock x:Name="TimeTxtBl" HorizontalAlignment="Left" Margin="465,243,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="21" Width="109"/>
+        <Slider x:Name="speedSlider" HorizontalAlignment="Left" Margin="375,55,0,0" VerticalAlignment="Top" Width="150" Minimum="1" Maximum="4" TickPlacement="BottomRight" TickFrequency="1" IsSnapToTickEnabled="True"/>
+        <Label Content="4" HorizontalAlignment="Left" Margin="512,73,0,0" VerticalAlignment="Top" Width="16" FontSize="10"/>
+        <Label Content="2" HorizontalAlignment="Left" Margin="419,73,0,0" VerticalAlignment="Top" Width="20" FontSize="10"/>
+        <Label Content="3" HorizontalAlignment="Left" Margin="465,73,0,0" VerticalAlignment="Top" Width="19" FontSize="10"/>
+        <Label Content="1" HorizontalAlignment="Left" Margin="373,73,0,0" VerticalAlignment="Top" Width="20" FontSize="10"/>
+        <Label Content="Video speed :" HorizontalAlignment="Left" Margin="373,24,0,0" VerticalAlignment="Top" Width="88"/>
+        <Slider x:Name="nbPlayerSlider" HorizontalAlignment="Left" Margin="375,132,0,0" VerticalAlignment="Top" Width="150" Minimum="1" Maximum="4" TickPlacement="BottomRight" TickFrequency="1" IsSnapToTickEnabled="True" ValueChanged="nbPlayerSlider_ValueChanged"/>
+        <Label Content="4" HorizontalAlignment="Left" Margin="512,150,0,0" VerticalAlignment="Top" Width="16" FontSize="10"/>
+        <Label Content="2" HorizontalAlignment="Left" Margin="419,150,0,0" VerticalAlignment="Top" Width="20" FontSize="10"/>
+        <Label Content="3" HorizontalAlignment="Left" Margin="465,150,0,0" VerticalAlignment="Top" Width="19" FontSize="10"/>
+        <Label Content="1" HorizontalAlignment="Left" Margin="373,150,0,0" VerticalAlignment="Top" Width="20" FontSize="10"/>
+        <Label Content="Nb joueur(s) :" HorizontalAlignment="Left" Margin="373,101,0,0" VerticalAlignment="Top" Width="88"/>
+        <TextBlock x:Name="tryTotalTxtBl" HorizontalAlignment="Left" Margin="462,272,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="21" Width="112"/>
+        <TextBlock x:Name="tryTxtBl1" HorizontalAlignment="Left" Margin="462,355,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="21" Width="112"/>
+        <TextBlock x:Name="tryTxtBl2" HorizontalAlignment="Left" Margin="462,381,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="21" Width="112"/>
+        <TextBlock x:Name="tryTxtBl3" HorizontalAlignment="Left" Margin="463,407,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="21" Width="112"/>
+        <TextBlock x:Name="tryTxtBl4" HorizontalAlignment="Left" Margin="462,433,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="21" Width="112"/>
+        <Label x:Name="p1Lbl" Content="Nb morts P1" HorizontalAlignment="Left" Margin="354,350,0,0" VerticalAlignment="Top" Width="98"/>
+        <Label x:Name="p2Lbl" Content="Nb morts P2" HorizontalAlignment="Left" Margin="354,376,0,0" VerticalAlignment="Top" Width="98"/>
+        <Label x:Name="p3Lbl" Content="Nb morts P3" HorizontalAlignment="Left" Margin="355,402,0,0" VerticalAlignment="Top" Width="98"/>
+        <Label x:Name="p4Lbl" Content="Nb morts P4" HorizontalAlignment="Left" Margin="354,428,0,0" VerticalAlignment="Top" Width="98"/>
+        <Label Content="Nb morts Total" HorizontalAlignment="Left" Margin="355,305,0,0" VerticalAlignment="Top" Width="98"/>
+        <Label Content="Temps Boss Down" HorizontalAlignment="Left" Margin="354,267,0,0" VerticalAlignment="Top" Width="111"/>
+        <TextBlock x:Name="TimeDownTxtBl" HorizontalAlignment="Left" Margin="465,269,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="21" Width="109"/>
     </Grid>
 
 </Window>
