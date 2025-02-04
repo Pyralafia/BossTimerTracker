@@ -42,6 +42,7 @@ namespace BossTimer
             HotkeyManager.Current.AddOrReplace("AddDeathP3", new KeyGesture(Key.NumPad3, ModifierKeys.Alt), AddDeathP3);
             HotkeyManager.Current.AddOrReplace("AddDeathP4", new KeyGesture(Key.NumPad4, ModifierKeys.Alt), AddDeathP4);
             HotkeyManager.Current.AddOrReplace("CaptureTimer", new KeyGesture(Key.NumPad5, ModifierKeys.Alt), CaptureTimer);
+            HotkeyManager.Current.AddOrReplace("CaptureTimer2", new KeyGesture(Key.NumPad9), CaptureTimer);
             
             timeListbx.ItemsSource = visualList;
             playerDeathDisplayTxtBl = new TextBlock[4] { tryTxtBl1, tryTxtBl2, tryTxtBl3, tryTxtBl4 };
