@@ -24,7 +24,7 @@
         <Label Content="3" HorizontalAlignment="Left" Margin="465,150,0,0" VerticalAlignment="Top" Width="19" FontSize="10"/>
         <Label Content="1" HorizontalAlignment="Left" Margin="373,150,0,0" VerticalAlignment="Top" Width="20" FontSize="10"/>
         <Label Content="Nb joueur(s) :" HorizontalAlignment="Left" Margin="373,101,0,0" VerticalAlignment="Top" Width="88"/>
-        <TextBlock x:Name="tryTotalTxtBl" HorizontalAlignment="Left" Margin="462,272,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="21" Width="112"/>
+        <TextBlock x:Name="tryTotalTxtBl" HorizontalAlignment="Left" Margin="453,307,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="21" Width="112"/>
         <TextBlock x:Name="tryTxtBl1" HorizontalAlignment="Left" Margin="462,355,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="21" Width="112"/>
         <TextBlock x:Name="tryTxtBl2" HorizontalAlignment="Left" Margin="462,381,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="21" Width="112"/>
         <TextBlock x:Name="tryTxtBl3" HorizontalAlignment="Left" Margin="463,407,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="21" Width="112"/>
